@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#202020">
+
+    <!-- Scrollable content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Top profile section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="#DCDCDC"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/imageProfile"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/ic_launcher_foreground"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/circle_shape"
+                    android:padding="2dp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingStart="16dp">
+
+                    <TextView
+                        android:id="@+id/textName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ім’я"
+                        android:textSize="20sp"
+                        android:textColor="#000" />
+
+                    <TextView
+                        android:id="@+id/textEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Пошта"
+                        android:textSize="16sp"
+                        android:textColor="#000" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Status -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:background="#DCDCDC">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Статус:"
+                    android:textSize="18sp" />
+
+                <View
+                    android:id="@+id/statusCircle"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/gray_circle" />
+            </LinearLayout>
+
+            <!-- Salary and hours -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Кількість годин та кількість робочих днів:"
+                android:padding="8dp"
+                android:textStyle="bold"
+                android:background="#DCDCDC" />
+
+            <TextView
+                android:text="Звітність:"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:textStyle="bold"
+                android:background="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/textSalary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:background="#DCDCDC"
+                android:text="Очікувана заробітна плата: 0" />
+
+            <TextView
+                android:id="@+id/textHours"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:background="#DCDCDC"
+                android:text="Кількість годин: 0" />
+
+            <!-- Report Table -->
+            <TableLayout
+                android:id="@+id/tableReport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"
+                android:shrinkColumns="*"
+                android:padding="8dp"
+                android:background="#EFEFEF"
+                android:layout_marginTop="16dp">
+
+                <!-- Header row -->
+                <TableRow>
+                    <TextView
+                        android:text="Дата"
+                        android:textStyle="bold"
+                        android:padding="8dp" />
+                    <TextView
+                        android:text="Зарплата"
+                        android:textStyle="bold"
+                        android:padding="8dp" />
+                    <TextView
+                        android:text="Години"
+                        android:textStyle="bold"
+                        android:padding="8dp" />
+                </TableRow>
+
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#CCCCCC" />
+
+                <!-- More rows can be added dynamically -->
+
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Fixed Sign Out Button at the Bottom -->
+    <Button
+        android:id="@+id/btnSignOut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ВИЙТИ"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#333333"
+        android:layout_margin="16dp" />
+
+</LinearLayout>
